@@ -36,20 +36,44 @@ struct Home: View {
                 GeometryReader {
                     let size = $0.size
                     ScrollView(.horizontal){
-                        HStack(spacing: 10) {
+                        HStack(spacing: 5) {
                             
                             ForEach(cards) { card in
                                 /// in order to move card in reverse direction ( parallax Effects)
                                 GeometryReader(content: { proxy in
                                     let cardSize = proxy.size
+                                    //=======================================================
+                                    // Parallex effect 2 👇
+                                    //let minX = proxy.frame(in: .scrollView).minX - 30
+                                    // Parallex effect 1👇
+                                    let minX = min(((proxy.frame(in: .scrollView).minX - 30) * 1.40), size.width * 1.40)
+                                    // ======================================
                                     Image(card.image)
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
+                                        //.scaleEffect(1.25)
+                                        .offset(x: -minX)
+                                    // using this frame with this width oscaling before offset
+                                        .frame(width: proxy.size.width * 2.5)
                                         .frame(width: cardSize.width, height: cardSize.height)
+                                        .overlay{
+                                            VStack{
+                                                Text("\(minX)")
+                                                    .font(.largeTitle)
+                                                    .foregroundStyle(Color.green)
+                                                overlayView(card)
+                                            }
+                                        }
                                         .clipShape(.rect(cornerRadius: 15))
                                         .shadow(color: .black.opacity(0.25), radius: 8, x: 5 , y: 10 )
-                                })
+                                })//GeometryReader
                                 .frame(width: size.width - 60 , height: size.height - 50)
+                                // Scroll Animation
+                                .scrollTransition(.interactive, axis: .horizontal){
+                                    view, phase in
+                                    
+                                    view.scaleEffect(phase.isIdentity ? 1:0.95)
+                                }
                             }
                         }// HStack
                         .padding(.horizontal, 30)
@@ -66,6 +90,37 @@ struct Home: View {
             .padding(15)
         }
         .scrollIndicators(.hidden)
+    }
+    
+    @ViewBuilder
+    func overlayView(_ card:TripCard) -> some View {
+        ZStack(alignment: .bottomLeading){
+            LinearGradient(colors: [
+                .clear,
+                .clear,
+                .clear,
+                .clear,
+                .clear,
+                .black.opacity(0.1),
+                .black.opacity(0.5),
+                .black
+            ], startPoint: .top, endPoint: .bottom)
+            
+            
+            VStack(alignment:.leading, spacing:4){
+                Text(card.title)
+                    .font(.title2)
+                    .fontWeight(.black)
+                    .foregroundStyle(.white)
+                
+                Text(card.subtitle)
+                    .font(.callout)
+                    .foregroundStyle(.white.opacity(0.8))
+            }
+            .padding(20)
+        }
+        
+        
     }
 }
 
