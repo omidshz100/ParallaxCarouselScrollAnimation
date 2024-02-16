@@ -34,3 +34,5 @@ As a token of appreciation, here's a
 ![special gift for you](https://github.com/omidshz100/screenshots/blob/9247fb778856babc0072991e19b9949b7cea8eb5/parallax.gif)
 
 Enjoy coding and happy travels! 🌍✈️
+#SwiftUI #iOS #ParallaxAnimation #ScrollAnimation #SwiftUIAnimation #iOSDevelopment #MobileAppDevelopment #SwiftLang #SwiftUIProjects #TravelApp #UserInterface #UIAnimation #SwiftUIViews #GitHubProjects #SwiftUIExamples #iOSApp #SwiftDevelopment #SwiftUIChallenge #CodeSample #OpenSource
+
