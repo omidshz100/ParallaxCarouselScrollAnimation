@@ -11,6 +11,8 @@
 		D9852C122B7F687100172F7B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9852C112B7F687100172F7B /* ContentView.swift */; };
 		D9852C142B7F687200172F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9852C132B7F687200172F7B /* Assets.xcassets */; };
 		D9852C172B7F687200172F7B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9852C162B7F687200172F7B /* Preview Assets.xcassets */; };
+		D9852C202B7F6ADA00172F7B /* TripCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9852C1F2B7F6ADA00172F7B /* TripCard.swift */; };
+		D9852C222B7F6BC600172F7B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9852C212B7F6BC600172F7B /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		D9852C112B7F687100172F7B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D9852C132B7F687200172F7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9852C162B7F687200172F7B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D9852C1F2B7F6ADA00172F7B /* TripCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCard.swift; sourceTree = "<group>"; };
+		D9852C212B7F6BC600172F7B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		D9852C0E2B7F687100172F7B /* ParallaxCarouselScrollAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				D9852C1E2B7F6AC900172F7B /* View */,
+				D9852C1D2B7F6ABD00172F7B /* Model */,
 				D9852C0F2B7F687100172F7B /* ParallaxCarouselScrollAnimationApp.swift */,
 				D9852C112B7F687100172F7B /* ContentView.swift */,
 				D9852C132B7F687200172F7B /* Assets.xcassets */,
@@ -65,6 +71,22 @@
 				D9852C162B7F687200172F7B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D9852C1D2B7F6ABD00172F7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9852C1F2B7F6ADA00172F7B /* TripCard.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D9852C1E2B7F6AC900172F7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9852C212B7F6BC600172F7B /* Home.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9852C202B7F6ADA00172F7B /* TripCard.swift in Sources */,
 				D9852C122B7F687100172F7B /* ContentView.swift in Sources */,
+				D9852C222B7F6BC600172F7B /* Home.swift in Sources */,
 				D9852C102B7F687100172F7B /* ParallaxCarouselScrollAnimationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
